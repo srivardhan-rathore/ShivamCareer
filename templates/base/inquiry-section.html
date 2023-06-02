@@ -1,0 +1,181 @@
+{% load static %}
+
+
+<section id="inquirySection" class = "sc-contact curved-bottom bg-light-gray sc-py-6 position-relative">
+    <div class = "container">
+      <div class = "sc-contact-cnt px-3">
+        <div class = "sc-block row align-items-end">
+          <div class = "sc-block-l col-xl-5">
+            <div class = "max-w-wrapper">
+              <img src = "{% static 'front/assets/images/index-pg/get-in-touch.png' %}" alt = "">
+            </div>
+          </div>
+
+          <div class = "sc-block-r mt-5 mt-xl-0 col-xl-7">
+            <div class = "sc-title text-center text-xl-start">
+              <h5 class = "sc-title-sub">Get in touch</h5>
+              <h2 class = "sc-title-main max-w-wrapper">Please drop your Inquiry here.
+
+            </h2>
+            </div>
+            <p class = "p-text mb-4 text-center text-xl-start max-w-wrapper">To start consultation and admission, kindly fill up the form , one of our advisers will contact you via email in less than 24 hours</p>
+
+            <div class = "contact-form">
+
+              <form autocomplete="on" action="{% url 'contact_page' %}" id="contact-form" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+{#                <input type="hidden" name="_token" value="9MhGcmnsE6ZdgJIHTkxpOzXZ3nHrlXnqTqPT3bCP">#}
+                  <div class = "form-element mb-3 mb-sm-4">
+                    <input type="text" required name="name" value="" class = "form-control" placeholder="Full Name" >
+                  </div>
+
+                <div class = "form-element row mb-3 mb-sm-4">
+                  <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
+                    <input type = "text" name="phone" value="" class = "form-control" placeholder="Mobile Number" >
+                  </div>
+
+                  <div class = "col-md-6">
+                    <input type = "email" required name="email" value="" class = "form-control" placeholder="Email Id" >
+                  </div>
+                </div>
+
+
+
+                <div class = "form-element row mb-3 mb-sm-4">
+                  <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
+                    <select required name = "education_level" class = "form-select">
+                      <option selected disabled>Education level</option>
+                      <option value="12">12th (UnderGrad)</option>
+                      <option value="bachelor">Bachelor (Graduate)</option>
+                      <option value="master">Master (Post Graduate)</option>
+                    </select>
+                                      </div>
+
+                  <div class = "col-md-6">
+                    <select required name = "course" class = "form-select">
+                      <option selected disabled>Courses</option>
+
+                      {% for course in courses %}
+                        <option value="{{ course.name }}">{{ course.name }}</option>
+                      {% endfor %}
+
+                    </select>
+                  </div>
+
+
+                </div>
+
+                <div class = "form-element mb-3 mb-sm-4">
+                  <label for = "" class = "form-label mb-3 mb-sm-4">Your preferred study destination</label>
+                  <div class = "checkbox-list d-flex flex-wrap align-items-center">
+
+
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="1" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/03/1679895247USA%20flag.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in USA</span>
+                      </div>
+                    </div>
+
+
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="2" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/22/12/1670232331flag-1.png' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Canada</span>
+                      </div>
+                    </div>
+
+
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="3" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/03/1679895298Australia%20flag.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Australia</span>
+                      </div>
+                    </div>
+
+
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="10" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/03/1679895200UK%20flag.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in United Kingdom</span>
+                      </div>
+                    </div>
+
+
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="11" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/01/1674035000istockphoto-657672808-612x612.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in New Zealand</span>
+                      </div>
+                    </div>
+
+
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="12" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/01/1674036516netherlad.png' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Netherlands</span>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+
+                <div class = "form-element row">
+                  <div class = "col-md-6">
+                    <select name = "study_plan" class = "form-select">
+                      <option selected>When do you plan to study?</option>
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <textarea name="message" style="height: 180px !important;" placeholder="Type your message here..." class="form-control" id="" cols="30" rows="15"></textarea>
+                </div>
+
+                <button type = "submit" class = "btn btn-flame">
+                  <span class = "btn-text">Submit</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "curved-shape-1">
+      <img src = "{% static 'front/assets/images/components/green-curve-line.png' %}" alt = "">
+    </div>
+    <div class = "curved-shape-2">
+      <img src = "{% static 'front/assets/images/components/white-curve-line.png' %}" alt = "">
+    </div>
+  </section>

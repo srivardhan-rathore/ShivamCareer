@@ -45,22 +45,22 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span>Study Abroad</span>
+                            <span>Study</span>
                             <span class="icon text-black op-08">
                                 <i class="fa-sharp fa-solid fa-chevron-down"></i>
                             </span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="destination/study-in-usa.html">Study in USA</a></li>
-                            <li><a class="dropdown-item" href="destination/study-in-canada.html">Study in Canada</a></li>
-                            <li><a class="dropdown-item" href="destination/study-in-australia.html">Study in Australia</a></li>
-                            <li><a class="dropdown-item" href="destination/study-in-united-kingdom.html">Study in United Kingdom</a></li>
-                            <li><a class="dropdown-item" href="destination/study-in-new-zealand.html">Study in New Zealand</a></li>
-                            <li><a class="dropdown-item" href="destination/study-in-netherlands.html">Study in Netherlands</a></li>
+                            <li><a class="dropdown-item" href="#">Study in India</a></li>
+                            <li><a class="dropdown-item" href="#">Study in Canada</a></li>
+                            <li><a class="dropdown-item" href="#">Study in Australia</a></li>
+                            <li><a class="dropdown-item" href="#">Study in United Kingdom</a></li>
+                            <li><a class="dropdown-item" href="#">Study in New Zealand</a></li>
+                            <li><a class="dropdown-item" href="#">Study in Netherlands</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="classes.html">
-                            <span>Classes</span>
+                        <a class="nav-link " href="{% url 'course_page' %}">
+                            <span>Courses</span>
 
                         </a>
 
@@ -73,7 +73,7 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="{% url 'blog_page' %}">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact_page' %}">Contact</a>
