@@ -1,0 +1,602 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    Aboutus
+{% endblock %}
+
+{% block content %}
+        <main class="pg-about bg-whitesmoke">
+
+        <section class="sc-banner bg-ghost-white px-3 py-lg-0 d-flex align-items-end">
+            <div class="container">
+                <div class="sc-banner-cnt">
+                    <div class="sc-block row justify-content-center justify-content-lg-between">
+                        <div
+                            class="sc-block-l text-center col-lg-6 text-lg-start mx-auto ms-lg-0 pt-5 pt-lg-0 align-self-center">
+                            <div class="max-w-wrapper">
+                                <h1 class="title-lg text-primary">Study abroad skills with our in-depth and practical
+                                    guides.</h1>
+                            </div>
+                        </div>
+
+                        <div class="sc-block-r mt-5 position-relative col-lg-6 mt-lg-0 align-self-end">
+                            <div class="block-wrapper">
+                                <img src="{% static 'front/assets/images/about-pg/about-banner.png' %}" alt=""
+                                    class="ms-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="sc-tabs bg-whitesmoke px-3">
+            <div class="">
+                <div class="sc-tabs-cnt">
+                    <div class="sc-block">
+                       <div class="container">
+                        <div class="tabs-head bg-white">
+                            <a href="#about" class="tabs-head-item fs-x-lg fw-5 text-primary">About</a>
+                            <a href="#team" class="tabs-head-item fs-x-lg fw-5 text-primary">Team</a>
+                            <a href="#affiliations" class="tabs-head-item fs-x-lg fw-5 text-primary">Achievements</a>
+                        </div>
+                       </div>
+
+                        <div class="tabs-body" id="about">
+
+                            <div class="pg-about-us">
+                                <div class="container">
+                                    <!-- about consulatancy section  -->
+                                    <section class="sc-abt-consultancy px-2">
+                                        <div class="row py-3">
+                                            <div class="col-lg-6">
+                                                <div class="col-txt pe-2 text-start text-sm-justify">
+                                                    <div class="col-heading">
+                                                        <h3 class="text-xl text-primary mb-3 text-capitalize fw-7">welcome
+                                                            to our consultancy
+                                                        </h3>
+                                                    </div>
+                                                    With over 21 years of experience, we specialize in counselling of destinations like Australia, USA, United Kingdom, Canada, Netherland and New Zealand.
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="col-items">
+                                                    <h3 class="text-xl text-primary fw-7 text-capitalize text mb-3">our
+                                                        specialization</h3>
+                                                    <div class="items">
+
+                                                        <div class="item  bg-light-gray mb-3">
+                                                            <div
+                                                                class="sub-item counselling d-flex align-items-center justify-content-between text-capitalize text-white bg-silver px-2 p-text py-1">
+                                                                <span>counselling</span>
+                                                                <span>
+                                                                    98%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item bg-light-gray mb-3">
+                                                            <div
+                                                                class="sub-item visa d-flex align-items-center justify-content-between text-capitalize text-white 
+                                                                bg-mantis p-text py-1 px-2">
+                                                                <span>Visa Success</span>
+                                                                <span>
+                                                                    90%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item bg-light-gray mb-3">
+                                                            <div
+                                                                class="sub-item finance d-flex align-items-center justify-content-between text-capitalize text-white 
+                                                                bg-slate p-text py-1 px-2">
+                                                                <span>Financial Documentation Guidance</span>
+                                                                <span>
+                                                                    90%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item bg-light-gray mb-3">
+                                                            <div
+                                                                class="sub-item language d-flex align-items-center justify-content-between text-capitalize text-white 
+                                                                bg-danger p-text py-1 px-2">
+                                                                <span>IELTS / TOEFL</span>
+                                                                <span>
+                                                                    85%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item bg-light-gray mb-3">
+                                                            <div
+                                                                class="sub-item predeparture d-flex align-items-center justify-content-between text-capitalize text-white 
+                                                                bg-glaucouse p-text py-1 px-2">
+                                                                <span>Pre departure Guidance</span>
+                                                                <span>100%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item bg-light-gray mb-3">
+                                                            <div
+                                                                class="sub-item support d-flex align-items-center justify-content-between text-capitalize text-white 
+                                                                bg-hunyadi p-text py-1 px-2">
+                                                                <span>Student Support </span>
+                                                                <span>100%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- end of about consulatancy section  -->
+
+                                    <section class="sc-reasons px-2">
+                                        <h2 class="text-xl fw-7 text-primary text-uppercase text-center my-lg-5 my-4">WHAT MAKES US THE BEST?
+                                        </h2>
+                                        <div class="row items d-flex align-items-stretch justify-content-center">
+
+                                                                                                                                    <div class="col-lg-4 mb-4 col-md-4 col-sm-6">
+                                                <div class="item h-100 p-2">
+                                                    <div class="item-icon mx-auto mb-3">
+                                                        <img
+                                                        src="{%static 'storage/upload/23/04/1682420245Arts-Humanities-course-300x300.png' %}">
+                                                    </div>
+                                                    <div class="item-contents text-center">
+                                                        <h4 class="text-lg item-title mb-2 text-capitalize">Superior Counselling</h4>
+                                                        <p class="item-content p-text">
+                                                            Our counselling is focused on planning the best career for you rather than just fining the right course &amp; university.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                        <div class="col-lg-4 mb-4 col-md-4 col-sm-6">
+                                                <div class="item h-100 p-2">
+                                                    <div class="item-icon mx-auto mb-3">
+                                                        <img
+                                                        src="{%static 'storage/upload/23/04/1682420843Ielts-300x300.png' %}">
+                                                    </div>
+                                                    <div class="item-contents text-center">
+                                                        <h4 class="text-lg item-title mb-2 text-capitalize">IELTS / TOEFL Classes</h4>
+                                                        <p class="item-content p-text">
+                                                            Our English teachers are some of the best in Nepal having high level training and global certification.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                        <div class="col-lg-4 mb-4 col-md-4 col-sm-6">
+                                                <div class="item h-100 p-2">
+                                                    <div class="item-icon mx-auto mb-3">
+                                                        <img
+                                                        src="{%static 'storage/upload/23/04/1682420901Business-course-300x300.png' %}">
+                                                    </div>
+                                                    <div class="item-contents text-center">
+                                                        <h4 class="text-lg item-title mb-2 text-capitalize">High Visa Success</h4>
+                                                        <p class="item-content p-text">
+                                                            We are regularly updated with the recent visa changes and regularly provide our students with updates thus our knowledge of documentation is superior.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                        <div class="col-lg-4 mb-4 col-md-4 col-sm-6">
+                                                <div class="item h-100 p-2">
+                                                    <div class="item-icon mx-auto mb-3">
+                                                        <img
+                                                        src="{%static 'storage/upload/23/04/1682420975Law-and-Legal-Studies-courses-300x300.png' %}">
+                                                    </div>
+                                                    <div class="item-contents text-center">
+                                                        <h4 class="text-lg item-title mb-2 text-capitalize">University Meet Ups</h4>
+                                                        <p class="item-content p-text">
+                                                            We get regular visits from university representatives and arrange direct meeting with students who receive the best information first hand
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                        <div class="col-lg-4 mb-4 col-md-4 col-sm-6">
+                                                <div class="item h-100 p-2">
+                                                    <div class="item-icon mx-auto mb-3">
+                                                        <img
+                                                        src="{%static 'storage/upload/23/04/1682421002Computer-IT-Course-300x300.png' %}">
+                                                    </div>
+                                                    <div class="item-contents text-center">
+                                                        <h4 class="text-lg item-title mb-2 text-capitalize">Faster Timing</h4>
+                                                        <p class="item-content p-text">
+                                                            Our services have faster results as we regularly inform the students with their application updates and maintain regular follow ups.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                        <div class="col-lg-4 mb-4 col-md-4 col-sm-6">
+                                                <div class="item h-100 p-2">
+                                                    <div class="item-icon mx-auto mb-3">
+                                                        <img
+                                                        src="{%static 'storage/upload/23/04/1682421029Hospitality-management-courses-300x300.png' %}">
+                                                    </div>
+                                                    <div class="item-contents text-center">
+                                                        <h4 class="text-lg item-title mb-2 text-capitalize">Infrastructure &amp; Support</h4>
+                                                        <p class="item-content p-text">
+                                                            We have the best infrastructure among all consultancies in Nepal and our students are very happy with the friendly support that we offer.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                                                        
+                                        </div>
+                                    </section>
+                                </div>
+                                <!-- about banner section  -->
+                                <section class="sc-quote bg-celestial px-2">
+                                    <div class="container">
+                                        <div class="row d-flex align-items-center justify-content-center">
+                                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                                <div class="col-title h-100">
+                                                    <h2
+                                                        class="text-white text-center text-sm-start text-capitalize title-lg">
+                                                        Working Together
+                                                        to develop value to your application experience</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="col-content">
+                                                    <p class="para-txt p-text text-justify  text-white">
+                                                        We believe in high ethics, transparency and customersatisfaction.
+                                                        From the moment our
+                                                        students sit for a counselling session they become well informed
+                                                        about the courses they
+                                                        are looking for, its costs, the career prospects it has and detailed
+                                                        information about
+                                                        the overall application process andthe total time it might take.
+                                                        This help to develop
+                                                        trust and makes the overallprocess much smoother while at the same
+                                                        time develop
+                                                        confidence among the students and the partners in their decision.
+                                                        And we are thankful
+                                                        towards our 1000 plusstudents for choosing us.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- end of banner section  -->
+                            </div>
+                          
+
+                            <div class="tabs-body-item mb-5 mt-5" id="team">
+                               <div class="container">
+                                <div class="cnt-body">
+                                    <h4>Team</h4>
+                                    <p>NEC is a group of highly trained professionals in the field of education. We are
+                                        proud to be associated with universities and colleges from USA, Canada, Australia,
+                                        New Zealand and India, and help students find the right study program and career
+                                        paths.</p>
+                                </div>
+                               </div>
+                            </div>
+
+                            <div class="tabs-body-item mb-5" id="affiliations">
+                                <div class="container">
+                                    <div class="cnt-body">
+                                        <h4>Values</h4>
+                                        <div class="d-flex flex-wrap values-list">
+                                                                                                                                                <div class="values-item text-center">
+                                                        <img
+                                                            src="{%static 'storage/upload/22/12/1670928653values-img-5.png' %}">
+                                                        <p class="p-text mt-4">Quality</p>
+                                                    </div>
+                                                                                                    <div class="values-item text-center">
+                                                        <img
+                                                            src="{%static 'storage/upload/22/12/1670928643values-img-4.png' %}">
+                                                        <p class="p-text mt-4">Leadership</p>
+                                                    </div>
+                                                                                                    <div class="values-item text-center">
+                                                        <img
+                                                            src="{%static 'storage/upload/22/12/1670928629values-img-3.png' %}">
+                                                        <p class="p-text mt-4">Innovation</p>
+                                                    </div>
+                                                                                                    <div class="values-item text-center">
+                                                        <img
+                                                            src="{%static 'storage/upload/22/12/1670928617values-img-2.png' %}">
+                                                        <p class="p-text mt-4">Honesty</p>
+                                                    </div>
+                                                                                                    <div class="values-item text-center">
+                                                        <img
+                                                            src="{%static 'storage/upload/22/12/1670928601values-img-1.png' %}">
+                                                        <p class="p-text mt-4">Trust</p>
+                                                    </div>
+                                                                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sc-teams sc-py-6 px-3">
+            <div class="container">
+                <div class="sc-teams-cnt">
+                    <div class="sc-block">
+                        <div class="sc-title text-center text-lg-start">
+                            <h2 class="sc-title-main max-w-wrapper text-primary">Management Team</h2>
+                        </div>
+
+                        <div class="three-cols-grid row">
+                                                            <div class="card-profile">
+                                    <div class="card-profile-img">
+                                        <img src="{%static 'storage/upload/22/12/1670304783team-2.png' %}"
+                                            alt="">
+                                    </div>
+                                    <div class="card-profile-body">
+                                        <h3 class="text-lg text-uppercase text-primary fw-5 my-4">MR. ANANTA POUDYAL</h3>
+                                        <p class="text text-black-50 text-uppercase mb-0">DIRECTOR - INTERNATIONAL BUSINESS &amp; RELATIONS</p>
+                                    </div>
+                                </div>
+                                                            <div class="card-profile">
+                                    <div class="card-profile-img">
+                                        <img src="{%static 'storage/upload/22/12/1670304737team-1.png' %}"
+                                            alt="">
+                                    </div>
+                                    <div class="card-profile-body">
+                                        <h3 class="text-lg text-uppercase text-primary fw-5 my-4">MR. THARENDRA RAJ ADHIKARI</h3>
+                                        <p class="text text-black-50 text-uppercase mb-0">MANAGING DIRECTOR</p>
+                                    </div>
+                                </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="sc-teams sc-py-6 px-3">
+            <div class="container">
+                <div class="sc-teams-cnt">
+                    <div class="sc-block">
+                        <div class="sc-title text-center text-lg-start">
+                            <h2 class="sc-title-main max-w-wrapper text-primary">Coordination Team</h2>
+                        </div>
+
+                        <div class="four-cols-grid">
+                                                            <div class="card-profile">
+                                    <div class="card-profile-img">
+                                        <img src="{%static 'storage/upload/22/12/1670304824team-3.png' %}"
+                                            alt="">
+                                    </div>
+                                    <div class="card-profile-body">
+                                        <h3 class="text-lg text-uppercase text-primary fw-5 my-4">MR. SHASHANK POUDYAL</h3>
+                                        <p class="text text-black-50 text-uppercase mb-0">HEAD COUNSELOR</p>
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light-gray">
+            <img src="{% static 'front/assets/images/components/line.png' %}" alt="">
+        </section>
+
+        <section id="inquirySection" class = "sc-contact curved-bottom bg-light-gray sc-py-6 position-relative">
+    <div class = "container">
+      <div class = "sc-contact-cnt px-3">
+        <div class = "sc-block row align-items-end">
+          <div class = "sc-block-l col-xl-5">
+            <div class = "max-w-wrapper">
+              <img src = "{% static 'front/assets/images/index-pg/get-in-touch.png' %}" alt = "">
+            </div>
+          </div>
+
+          <div class = "sc-block-r mt-5 mt-xl-0 col-xl-7">
+            <div class = "sc-title text-center text-xl-start">
+              <h5 class = "sc-title-sub">Get in touch</h5>
+              <h2 class = "sc-title-main max-w-wrapper">Please drop your Inquiry here.
+                
+            </h2>
+            </div>
+            <p class = "p-text mb-4 text-center text-xl-start max-w-wrapper">To start consultation and admission, kindly fill up the form , one of our advisers will contact you via email in less than 24 hours</p>
+
+            <div class = "contact-form">
+              <form autocomplete="off" action="https://www.nepalec.edu.np/inquiry-store" id="contact-form" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_token" value="9MhGcmnsE6ZdgJIHTkxpOzXZ3nHrlXnqTqPT3bCP">                <div class = "form-element mb-3 mb-sm-4">
+                  <input type="text" required name="name" value="" class = "form-control" placeholder="Full Name" >
+                                  </div>
+
+                <div class = "form-element row mb-3 mb-sm-4">
+                  <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
+                    <input type = "text" name="contact" value="" class = "form-control" placeholder="Mobile Number" >
+                                      </div>
+                  <div class = "col-md-6">
+                    <input type = "email" required name="email" value="" class = "form-control" placeholder="Email Id" >
+                                      </div>
+                </div>
+
+
+
+                <div class = "form-element row mb-3 mb-sm-4">
+                  <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
+                    <select required name = "education_level" class = "form-select">
+                      <option selected>Education level</option>
+                      <option value="+2">+2</option>
+                      <option value="bachelor">Bachelor</option>
+                      <option value="master">Master</option>
+                    </select>
+                                      </div>
+
+                  <div class = "col-md-6">
+                    <select required name = "course" class = "form-select">
+                      <option selected>Courses</option>
+                      
+                      <option value="7">Hotel Management in Australia</option>
+                      
+                      <option value="8">Master’s of Business Administration (MBA) in Australia</option>
+                      
+                      <option value="9">Data Science in Australia</option>
+                      
+                      <option value="10">Nursing in Australia</option>
+                      
+                      <option value="11">Master’s of Professional Engineering in Australia</option>
+                      
+                      <option value="12">Study Bachelor of Hospitality Management at Boxhill Institute</option>
+                      
+                      <option value="13">Study Master of Community Development at Murdoch University</option>
+                      
+                      <option value="14">Study Bachelor of Game Development at SAE Institute</option>
+                      
+                      <option value="15">Study Bachelor of Business at Victoria University</option>
+                      
+                      <option value="16">Study Bachelor of Communication at Western Sydney University Sydney City Campus</option>
+                      
+                      <option value="17">Study Master of Project Management at Curtin University</option>
+                      
+                      <option value="18">Study Bachelor of Information Technology at Federation University</option>
+                      
+                      <option value="19">Study Bachelor of Biomedical Science at Federation University</option>
+                      
+                      <option value="20">Study Bachelor of Music at Excelsia College</option>
+                      
+                      <option value="21">Study Bachelor of Biosecurity Science at Boxhill Institute</option>
+                      
+                      <option value="22">Study Master of Information Technology at Swinburne University (ECA)</option>
+                      
+                    </select>
+                                      </div>
+
+                  <div class = "col-md-6 mt-4">
+                   <input type="text" required name="percentage" class="form-control  " value="" placeholder="Percentage">
+                  </div>
+
+                  <div class = "col-md-6 mt-4">
+                    <input type="number" name="age" value="" class="form-control  " placeholder="Age">
+                                       </div>
+
+                </div>
+
+                <div class = "form-element mb-3 mb-sm-4">
+                  <label for = "" class = "form-label mb-3 mb-sm-4">Your preferred study destination</label>
+                  <div class = "checkbox-list d-flex flex-wrap align-items-center">
+                                        
+                    
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="1" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/03/1679895247USA%20flag.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in USA</span>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="2" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{%static 'storage/upload/22/12/1670232331flag-1.png' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Canada</span>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="3" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/03/1679895298Australia%20flag.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Australia</span>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="10" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/03/1679895200UK%20flag.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in United Kingdom</span>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="11" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/01/1674035000istockphoto-657672808-612x612.jpg' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in New Zealand</span>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class = "checkbox-item">
+                      <input type = "checkbox" class = "checkbox-btn " value="12" name = "destinations[]">
+                      <div class = "check-btn-cnt d-flex align-items-center">
+                        <div class = "check-btn-img icon-img-sm">
+                          <img src = "{% static 'storage/upload/23/01/1674036516netherlad.png' %}" alt = "">
+                        </div>
+                        <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Netherlands</span>
+                      </div>
+                    </div>
+                                        
+
+                  </div>
+                </div>
+
+                <div class = "form-element row">
+                  <div class = "col-md-6">
+                    <select name = "study_plan" class = "form-select">
+                      <option selected>When do you plan to study?</option>
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <textarea name="message" style="height: 180px !important;" placeholder="Type your message here..." class="form-control" id="" cols="30" rows="15"></textarea>
+                </div>
+
+                <button type = "submit" class = "btn btn-flame">
+                  <span class = "btn-text">Submit</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "curved-shape-1">
+      <img src = "{% static 'front/assets/images/components/green-curve-line.png' %}" alt = "">
+    </div>
+    <div class = "curved-shape-2">
+      <img src = "{% static 'front/assets/images/components/white-curve-line.png' %}" alt = "">
+    </div>
+  </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,7 @@
+django
+django-extensions
+python-decouple
+django-bootstrap5
+whitenoise
+django-ckeditor
+Pillow

@@ -1,0 +1,269 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class = "pg-wrapper">
+
+
+    <main class = "pg-contact bg-whitesmoke">
+        <section class = "sc-contact-block1 sc-contact sc-py-6 px-3">
+            <div class = "contact-bg-1 bg-ghost-white"></div>
+            <div class = "contact-bg-2"></div>
+
+            <div class = "container">
+                <div class = "sc-contact-block1-cnt">
+                    <div class = "sc-block row">
+                        <!-- block left -->
+                        <div class = "sc-block-l col-xl-6">
+                            <div class = "max-w-wrapper">
+                                <div class = "sc-title text-center text-xl-start">
+                                    <h2 class = "sc-title-main text-primary">Contact <span class = "text-white">Us.</span></h2>
+                                </div>
+                                <p class = "p-text mb-4 text-center text-xl-start">Walk in to our office for free study abroad counselling, application submissions, visa assistance, pre-departure sessions and much more.</p>
+                            </div>
+
+                            <div class = "contact-info position-relative">
+                                <div class = "contact-info-item d-inline-flex justify-content-start bg-white">
+                                    <div class = "contact-info-item-icon">
+                                        <img src = "{% static 'front/assets/images/contact-pg/call-calling.svg' %}">
+                                    </div>
+                                    <div class = "contact-info-item-text d-flex flex-wrap">
+                                        <span class = "text-black-chocolate me-2">Phone: </span>
+                                        <span>Ankur: 6000469347, 7002308575 </span>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class = "contact-info-item d-inline-flex justify-content-start bg-white">
+                                    <div class = "contact-info-item-icon">
+                                        <img src = "{% static 'front/assets/images/contact-pg/watch.svg' %}">
+                                    </div>
+                                    <div class = "contact-info-item-text d-flex flex-wrap">
+                                        <span class = "text-black-chocolate me-2">Timings: </span>
+                                        <span>Monday to Saturday – 8:00 Am to 6:30 Am</span>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class = "contact-info-item d-inline-flex justify-content-start bg-white">
+                                    <div class = "contact-info-item-icon">
+                                        <img src = "{% static 'front/assets/images/contact-pg/sms-tracking.svg' %}">
+                                    </div>
+                                    <div class = "contact-info-item-text d-flex flex-wrap">
+                                        <span class = "text-black-chocolate me-2">Email: </span>
+                                        <span>ShivamCareerConsultancy@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- block right -->
+                        <div class = "sc-block-r col-xl-6 mt-5 mt-xl-0">
+                            <div class = "sc-block-r-wrapper bg-white ms-xl-auto">
+                                <div class = "max-w-wrapper mx-auto ms-lg-0">
+                                <div class = "sc-title text-center text-xl-start">
+                                    <h2 class = "sc-title-main max-w-wrapper text-dark">Book a Free Session with Experts</h2>
+                                </div>
+                                <p class = "p-text mb-4 text-center text-xl-start max-w-wrapper">To start consultation and admission, kindly fill up the form , one of our advisers will contact you via email in less than 24 hours</p>
+                                </div>
+
+                                <div class = "contact-form">
+                                    <form action="https://www.nepalec.edu.np/booking-store" method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="_token" value="9MhGcmnsE6ZdgJIHTkxpOzXZ3nHrlXnqTqPT3bCP">                                      <div class = "form-element mb-3 mb-sm-4">
+                                        <input type = "text" name="name" value="" class = "form-control" placeholder="Full Name" name = "">
+                                      </div>
+
+                                      <div class = "form-element row mb-3 mb-sm-4">
+                                        <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
+                                          <input type = "text" name="contact" value=""  class = "form-control" placeholder="Mobile Number" name = "">
+                                        </div>
+                                        <div class = "col-md-6">
+                                          <input type = "email" name="email" value="" class = "form-control" placeholder="Email Id" name = "">
+                                        </div>
+                                      </div>
+
+                                      <div class = "form-element row mb-3 mb-sm-4">
+                                        <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
+                                          <select name = "education_level" class = "form-select">
+                                            <option selected>Education level</option>
+                                            <option value="+2">+2</option>
+                                            <option value="bachelor">Bachelor</option>
+                                            <option value="master">Master</option>
+                                          </select>
+                                        </div>
+
+                                        <div class = "col-md-6">
+                                            <select name = "course" class = "form-select">
+                                                
+                                                <option value="7">Hotel Management in Australia</option>
+                                                
+                                                <option value="8">Master’s of Business Administration (MBA) in Australia</option>
+                                                
+                                                <option value="9">Data Science in Australia</option>
+                                                
+                                                <option value="10">Nursing in Australia</option>
+                                                
+                                                <option value="11">Master’s of Professional Engineering in Australia</option>
+                                                
+                                                <option value="12">Study Bachelor of Hospitality Management at Boxhill Institute</option>
+                                                
+                                                <option value="13">Study Master of Community Development at Murdoch University</option>
+                                                
+                                                <option value="14">Study Bachelor of Game Development at SAE Institute</option>
+                                                
+                                                <option value="15">Study Bachelor of Business at Victoria University</option>
+                                                
+                                                <option value="16">Study Bachelor of Communication at Western Sydney University Sydney City Campus</option>
+                                                
+                                                <option value="17">Study Master of Project Management at Curtin University</option>
+                                                
+                                                <option value="18">Study Bachelor of Information Technology at Federation University</option>
+                                                
+                                                <option value="19">Study Bachelor of Biomedical Science at Federation University</option>
+                                                
+                                                <option value="20">Study Bachelor of Music at Excelsia College</option>
+                                                
+                                                <option value="21">Study Bachelor of Biosecurity Science at Boxhill Institute</option>
+                                                
+                                                <option value="22">Study Master of Information Technology at Swinburne University (ECA)</option>
+                                                                                            </select>
+                                          </div>
+                                      </div>
+
+                                      <div class = "col-md-6 mt-4 mb-4">
+                                        <input type="text" name="percentage" class="form-control" placeholder="Percentage">
+                                       </div>
+
+                                      <div class = "form-element mb-3 mb-sm-4">
+                                        <label for = "" class = "form-label mb-3 mb-sm-4">Your preferred study destination</label>
+                                        <div class = "checkbox-list d-flex flex-wrap align-items-center">
+                                                                                        
+
+                                            <div class = "checkbox-item">
+                                              <input type = "checkbox" class = "checkbox-btn" value="1" name = "destinations[]">
+                                              <div class = "check-btn-cnt d-flex align-items-center">
+                                                <div class = "check-btn-img icon-img-sm">
+                                                  <img src = "{% static 'storage/upload/23/03/1679895247USA%20flag.jpg' %}" alt = "">
+                                                </div>
+                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in USA</span>
+                                              </div>
+                                            </div>
+                                            
+
+                                            <div class = "checkbox-item">
+                                              <input type = "checkbox" class = "checkbox-btn" value="2" name = "destinations[]">
+                                              <div class = "check-btn-cnt d-flex align-items-center">
+                                                <div class = "check-btn-img icon-img-sm">
+                                                  <img src = "{% static 'storage/upload/22/12/1670232331flag-1.png' %}" alt = "">
+                                                </div>
+                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Canada</span>
+                                              </div>
+                                            </div>
+                                            
+
+                                            <div class = "checkbox-item">
+                                              <input type = "checkbox" class = "checkbox-btn" value="3" name = "destinations[]">
+                                              <div class = "check-btn-cnt d-flex align-items-center">
+                                                <div class = "check-btn-img icon-img-sm">
+                                                  <img src = "{% static 'storage/upload/23/03/1679895298Australia%20flag.jpg' %}" alt = "">
+                                                </div>
+                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Australia</span>
+                                              </div>
+                                            </div>
+                                            
+
+                                            <div class = "checkbox-item">
+                                              <input type = "checkbox" class = "checkbox-btn" value="10" name = "destinations[]">
+                                              <div class = "check-btn-cnt d-flex align-items-center">
+                                                <div class = "check-btn-img icon-img-sm">
+                                                  <img src = "{% static 'storage/upload/23/03/1679895200UK%20flag.jpg' %}" alt = "">
+                                                </div>
+                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in United Kingdom</span>
+                                              </div>
+                                            </div>
+                                            
+
+                                            <div class = "checkbox-item">
+                                              <input type = "checkbox" class = "checkbox-btn" value="11" name = "destinations[]">
+                                              <div class = "check-btn-cnt d-flex align-items-center">
+                                                <div class = "check-btn-img icon-img-sm">
+                                                  <img src = "{% static 'storage/upload/23/01/1674035000istockphoto-657672808-612x612.jpg' %}" alt = "">
+                                                </div>
+                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in New Zealand</span>
+                                              </div>
+                                            </div>
+                                            
+
+                                            <div class = "checkbox-item">
+                                              <input type = "checkbox" class = "checkbox-btn" value="12" name = "destinations[]">
+                                              <div class = "check-btn-cnt d-flex align-items-center">
+                                                <div class = "check-btn-img icon-img-sm">
+                                                  <img src = "{% static 'storage/upload/23/01/1674036516netherlad.png' %}" alt = "">
+                                                </div>
+                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Netherlands</span>
+                                              </div>
+                                            </div>
+                                                                                        
+                                        </div>
+                                      </div>
+
+                                      <button type = "submit" class = "btn btn-flame"><span class = "btn-text">Submit</span></button>
+                                    </form>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{#      <section class = "sc-maps bg-light-gray sc-py-6 position-relative">#}
+{#        <div class = "container">#}
+{#          <div class = "sc-maps-cnt px-3">#}
+{#            <div class = "sc-block">#}
+{#              <div class = "map-items row">#}
+{#                <div class = "col-lg-6 d-flex justify-content-center">#}
+{#                    <div class = "map-item mb-5 mb-lg-0">#}
+{#                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7064.912435966147!2d85.322659!3d27.703197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a64b5f13e1%3A0x28b2d0eacda46b98!2sPutalisadak%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1670391153132!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>#}
+{#                        #}
+{#                        <div class = "map-info bg-white">#}
+{#                            <p class = "title-xxl fw-5 text-black-chocolate mb-2">Head Office</p>#}
+{#                            <ul>#}
+{#                                <li><p class = "text mb-2 text-black-chocolate fw-3">Maha Ananga Niwas, Putalisadak, Opposite of Century Bank Kathmandu, Nepal</p></li>#}
+{#                                <li><p class = "text mb-2 text-black-chocolate fw-3"><span class = "fw-4">PO Box :</span> 15142, PPC 434 </p></li>#}
+{#                            </ul>#}
+{#                            <a href = "#" class = "btn text-uppercase">view on maps</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <div class = "col-lg-6 d-flex justify-content-center">#}
+{#                    <div class = "map-item">#}
+{#                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7067.044126450168!2d85.320814!3d27.670255000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19ce1dace9ed%3A0xfb9c8b305818fb7d!2sKumaripati%2C%20Lalitpur!5e0!3m2!1sen!2snp!4v1670390574934!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>#}
+{#                        <div class = "map-info bg-white">#}
+{#                            <p class = "title-xxl fw-5 text-black-chocolate mb-2">Lalitpur Branch</p>#}
+{#                            <ul>#}
+{#                                <li><p class = "text mb-2 text-black-chocolate fw-3">Kumaripati, Beside Machhapuchchhre Bank, Lalitpur Kathmandu, Nepal#}
+{#                                    Kathmandu, Nepal</p></li>#}
+{#                                <li><p class = "text mb-2 text-black-chocolate fw-3"><span class = "fw-4">PO Box :</span>15142, PPC 434 </p></li>#}
+{#                            </ul>#}
+{#                            <a href = "#" class = "btn text-uppercase">view on maps</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </section>#}
+{##}
+      <section class = " curved-bottom bg-light-gray sc-py-6 position-relative">
+        <div class = "curved-shape-1">
+          <img src = "{% static 'front/assets/images/components/green-curve-line.png' %}" alt = "">
+        </div>
+        <div class = "curved-shape-2">
+          <img src = "{% static 'front/assets/images/components/white-curve-line.png' %}" alt = "">
+        </div>
+      </section>
+    </main>
+</div>
+{% endblock %}

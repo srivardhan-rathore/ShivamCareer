@@ -1,0 +1,89 @@
+{% load static %}
+    <header class="hdr">
+    <!-- header top -->
+    <div class="hdr-top bg-primary text-white d-flex align-items-center">
+        <div class="container d-flex flex-column align-items-center flex-lg-row w-100 justify-content-lg-between">
+            <div
+                class="hdr-top-l d-flex flex-column text-center flex-md-row align-items-md-center w-100 justify-content-md-center justify-content-lg-start">
+                <div class="contact-no py-1">
+                    <span class="icon me-2"><i class="fa-solid fa-phone"></i></span>
+                    <span class='text-white text'>Ankur: 6000469347, 7002308575
+                    </span>
+                </div>
+                <div class="text py-1">
+                    <span class="icon me-2"><i class="fas fa-envelope"></i></span>
+                    ShivamCareerConsultancy@gmail.com</div>
+            </div>
+{#            <div class="hdr-top-r mt-2 mt-lg-0">#}
+{#                <ul class="social-links d-flex">#}
+{#                    <li><a target="_blank" href="../np.linkedin.com/company/nepal-education-consultancy.html" class="icon-circle"><i#}
+{#                                class="fa-brands fa-linkedin"></i></a></li>#}
+{#                    <li><a target="_blank" href="../www.instagram.com/nepaleducation/index.html" class="icon-circle"><i#}
+{#                                class="fa-brands fa-instagram"></i></a></li>#}
+{#                    <li><a target="_blank" href="../www.facebook.com/nepalec.edu.html" class="icon-circle"><i#}
+{#                                class="fa-brands fa-facebook-f"></i></a></li>#}
+{#                </ul>#}
+{#            </div>#}
+        </div>
+    </div>
+    <!-- end of header top -->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container px-3">
+            <a class="navbar-brand ms-3" href="{% url 'home' %}">
+                <img src="{% static 'front/assets/images/logo/img.png' %}"
+                    alt="Shivam Career Consultancy | Best Consultancy in India">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span>Study Abroad</span>
+                            <span class="icon text-black op-08">
+                                <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                            </span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="destination/study-in-usa.html">Study in USA</a></li>
+                            <li><a class="dropdown-item" href="destination/study-in-canada.html">Study in Canada</a></li>
+                            <li><a class="dropdown-item" href="destination/study-in-australia.html">Study in Australia</a></li>
+                            <li><a class="dropdown-item" href="destination/study-in-united-kingdom.html">Study in United Kingdom</a></li>
+                            <li><a class="dropdown-item" href="destination/study-in-new-zealand.html">Study in New Zealand</a></li>
+                            <li><a class="dropdown-item" href="destination/study-in-netherlands.html">Study in Netherlands</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="classes.html">
+                            <span>Classes</span>
+
+                        </a>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="{% url 'college_page' %}" role="button" >
+                            <span>Colleges</span>
+
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact_page' %}">Contact</a>
+                    </li>
+                </ul>
+                <div class="navbar-btn">
+                    <a class="btn-bordered-black" href="#inquirySection" >Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+</header>
