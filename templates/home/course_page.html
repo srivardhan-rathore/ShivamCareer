@@ -2,5 +2,58 @@
 {% load static %}
 
 {% block content %}
+        <main class="pg-blogs">
+        <section class="sc-blogs-main bg-light-gray sc-py-6 px-3 position-relative">
+            <div class="thead-shape">
+                <img src="{% static 'front/assets/images/components/line.png' %}" alt="">
+            </div>
+
+            <div class="container">
+                <div class="sc-blogs-main-cnt">
+                    <div class="sc-block">
+                        <div class="sc-title text-center text-lg-start">
+                            <h2 class="title-m max-w-wrapper text-primary">All Courses Offered</h2>
+                        </div>
+
+                        <div class="blogs-main-list">
+
+
+            <div class="class-cards mt-2 appendData row">
+
+            {% for course in courses %}
+            <div class="col-lg-6 col-xl-4">
+            <div class="card overflow-hidden">
+
+                <div class='card-img'>
+                    <img style="height: 250px !important;"
+                        src="{% static 'front/assets/images/logo/img.png' %}"
+                        alt="">
+                </div>
+                <div class="card-body py-4">
+                    <h4 class="card-title title-xxl">{{ course.name }}</h4>
+                    <p class="p-text">{{ course.description|truncatewords:30|safe }}</p>
+                </div>
+{#                <div class="card-footer bg-primary p-0">#}
+{#                    <a href="class/pte-a.html"#}
+{#                        class="card-link w-100 h-100 d-flex align-items-center justify-content-center text text-white">#}
+{#                        <span class="me-1">Continue Reading</span>#}
+{#                        <span class="card-link-icon">#}
+{#                            <i class="fa-solid fa-chevron-right"></i>#}
+{#                            <i class="fa-solid fa-chevron-right"></i>#}
+{#                        </span>#}
+{#                    </a>#}
+{#                </div>#}
+            </div>
+        </div>
+            {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% include 'base/inquiry-section.html' %}
+    </main>
 
 {% endblock %}

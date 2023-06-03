@@ -50,7 +50,7 @@ class Blog(models.Model):
     cover_image = models.ImageField(upload_to='blog/cover_image')
     author = models.CharField(max_length=40, default="Shivam Career Consultancy")
     content = RichTextField(max_length=5000, blank=True)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):

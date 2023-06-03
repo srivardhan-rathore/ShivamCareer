@@ -6,5 +6,73 @@
 {% endblock %}
 
 {% block content %}
+    <main class="pg-blogs">
+        <section class="sc-blogs-main bg-light-gray sc-py-6 px-3 position-relative">
+            <div class="thead-shape">
+                <img src="{% static 'front/assets/images/components/line.png' %}" alt="">
+            </div>
+
+            <div class="container">
+                <div class="sc-blogs-main-cnt">
+                    <div class="sc-block">
+                        <div class="sc-title text-center text-lg-start">
+                            <h2 class="title-m max-w-wrapper text-primary">Latest Blogs</h2>
+                        </div>
+
+                        <div class="blogs-main-list">
+                            <form class="blog-search-form">
+                                <div class="input-group d-flex justify-content-between flex-nowrap">
+                                    <div class="d-flex align-items-center">
+                                        <span class="input-group-icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                        <input type="text" name="search_title" id="BlogSearch" class="form-control border-0"
+                                            placeholder="Search Blogs and more...">
+                                    </div>
+                                    <select id="post_type" class="input-group-text bg-white">
+                                        <option value="all">All Posts</option>
+                                        <option value="recent">Recents</option>
+                                        <option value="popular">Popular</option>
+                                    </select>
+                                </div>
+                            </form>
+
+        <div class="blogs-cards appendData row">
+
+            {% for blog in blogs %}
+            <div class="col-lg-6 col-xl-4 mb-4">
+            <div class="card overflow-hidden">
+                <div class='card-img'>
+                    <img style="height: 250px;"
+                        src="{{ blog.cover_image.url }}"
+                        alt="{{ blog.title }}">
+                </div>
+                <div class="card-body py-4">
+                    <h4 class="card-title title-xxl">{{ blog.title|truncatechars:30 }}</h4>
+                    <p class="p-text">{{ blog.content|truncatewords:50|safe }}</p>
+                </div>
+                <div class="card-footer bg-primary p-0">
+                    <a href="{% url 'blog_detail' blog.slug %}"
+                        class="card-link w-100 h-100 d-flex align-items-center justify-content-center text text-white">
+                        <span class="me-1">Continue Reading</span>
+                        <span class="card-link-icon">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+            {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% include 'base/inquiry-section.html' %}
+    </main>
 
 {% endblock %}

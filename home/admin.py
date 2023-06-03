@@ -7,13 +7,13 @@ from .models import Course, SubCourse, College, Contact, Testimonial, Blog
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'short_name', 'description')
+    list_display = ('name', 'short_name',)
     search_fields = ('name',)
 
 
 @admin.register(SubCourse)
 class SubCourseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'course', 'name', 'description')
+    list_display = ('course', 'name', 'description',)
     list_filter = ('course',)
     search_fields = ('name',)
 
@@ -23,7 +23,7 @@ class CollegeAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.ManyToManyField: {'widget': SelectMultiple},
     }
-    list_display = ('id', 'name', 'alias', 'address', 'logo', 'image')
+    list_display = ('name', 'alias',)
     raw_id_fields = ('course_offered',)
     search_fields = ('name',)
 
@@ -31,13 +31,11 @@ class CollegeAdmin(admin.ModelAdmin):
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
         'name',
         'email',
         'phone',
         'education_level',
         'course',
-        'message',
         'created_at',
     )
     list_filter = ('course', 'created_at')
@@ -48,11 +46,9 @@ class ContactAdmin(admin.ModelAdmin):
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
         'name',
         'image',
         'current_college',
-        'review',
         'created_at',
     )
     list_filter = ('created_at',)
@@ -63,11 +59,9 @@ class TestimonialAdmin(admin.ModelAdmin):
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
         'title',
         'cover_image',
         'author',
-        'content',
         'slug',
         'created_at',
     )

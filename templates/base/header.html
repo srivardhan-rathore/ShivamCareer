@@ -42,6 +42,9 @@
 
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link" href="{% url 'contact_page' %}"><span>India</span></a>#}
+{#                    </li>#}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -50,12 +53,13 @@
                                 <i class="fa-sharp fa-solid fa-chevron-down"></i>
                             </span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Study in India</a></li>
-                            <li><a class="dropdown-item" href="#">Study in Canada</a></li>
-                            <li><a class="dropdown-item" href="#">Study in Australia</a></li>
-                            <li><a class="dropdown-item" href="#">Study in United Kingdom</a></li>
-                            <li><a class="dropdown-item" href="#">Study in New Zealand</a></li>
-                            <li><a class="dropdown-item" href="#">Study in Netherlands</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact_page' %}">Study in India</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact_page' %}">Study in USA</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact_page' %}">Study in Canada</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact_page' %}">Study in Australia</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact_page' %}">Study in United Kingdom</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact_page' %}">Study in New Zealand</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contact_page' %}">Study in Netherlands</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
