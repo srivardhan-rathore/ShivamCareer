@@ -26,7 +26,9 @@ def contact_page(request):
         contact.message = request.POST.get('message')
         contact.save()
 
-    return render(request, 'home/contact-us.html')
+    courses = Course.objects.all()
+    context = {'courses': courses}
+    return render(request, 'home/contact-us.html', context)
 
 
 # College Page

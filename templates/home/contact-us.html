@@ -1,6 +1,10 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
+{% block title %}
+    Contact Us
+{% endblock %}
+
 {% block content %}
 <div class = "pg-wrapper">
 
@@ -93,45 +97,13 @@
 
                                         <div class = "col-md-6">
                                             <select name = "course" class = "form-select">
-                                                
-                                                <option value="7">Hotel Management in Australia</option>
-                                                
-                                                <option value="8">Master’s of Business Administration (MBA) in Australia</option>
-                                                
-                                                <option value="9">Data Science in Australia</option>
-                                                
-                                                <option value="10">Nursing in Australia</option>
-                                                
-                                                <option value="11">Master’s of Professional Engineering in Australia</option>
-                                                
-                                                <option value="12">Study Bachelor of Hospitality Management at Boxhill Institute</option>
-                                                
-                                                <option value="13">Study Master of Community Development at Murdoch University</option>
-                                                
-                                                <option value="14">Study Bachelor of Game Development at SAE Institute</option>
-                                                
-                                                <option value="15">Study Bachelor of Business at Victoria University</option>
-                                                
-                                                <option value="16">Study Bachelor of Communication at Western Sydney University Sydney City Campus</option>
-                                                
-                                                <option value="17">Study Master of Project Management at Curtin University</option>
-                                                
-                                                <option value="18">Study Bachelor of Information Technology at Federation University</option>
-                                                
-                                                <option value="19">Study Bachelor of Biomedical Science at Federation University</option>
-                                                
-                                                <option value="20">Study Bachelor of Music at Excelsia College</option>
-                                                
-                                                <option value="21">Study Bachelor of Biosecurity Science at Boxhill Institute</option>
-                                                
-                                                <option value="22">Study Master of Information Technology at Swinburne University (ECA)</option>
-                                                                                            </select>
+                                                <option selected disabled>Courses</option>
+                                                {% for course in courses %}
+                                                <option value="{{ course.name }}">{{ course.name }}</option>
+                                                {% endfor %}
+                                            </select>
                                           </div>
                                       </div>
-
-                                      <div class = "col-md-6 mt-4 mb-4">
-                                        <input type="text" name="percentage" class="form-control" placeholder="Percentage">
-                                       </div>
 
                                       <div class = "form-element mb-3 mb-sm-4">
                                         <label for = "" class = "form-label mb-3 mb-sm-4">Your preferred study destination</label>
