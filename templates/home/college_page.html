@@ -95,7 +95,7 @@
                             <a href="#" class="btn-flame-sm btn">
                                 <span class="btn-text">Inquire Now</span>
                             </a>
-                            <a href="course/study-bachelor-of-biosecurity-science-at-boxhill-institute.html" class="btn-outline-primary-sm btn bg-white ms-2">
+                            <a href="{% url 'college_detail' college.id %}" class="btn-outline-primary-sm btn bg-white ms-2">
                                 <span class="btn-text">College details</span>
                             </a>
                         </div>
@@ -106,12 +106,12 @@
                         <div class="course-itm-bottom-block h-100">
                             <h6 class="p-text-sm mb-3">Courses Offered</h6>
 
-
-
                             <ul class="mb-2">
-                                {% for course in college.course_offered.all %}
-                                    <li class="p-text-xs text-black fw-5">{{ course.short_name }}</li>
-                                {% endfor %}
+                                    <li class="p-text-xs text-black fw-5">
+                                        {% for course in college.course_offered.all %}
+                                            {{ course.short_name }} -
+                                        {% endfor %}
+                                    </li>
                                 <li class="p-text-xs fw-3 text-black">
                                     </li>
                             </ul>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-2 px-1">
                         <div class="course-itm-bottom-block h-100">
-                            <h6 class="p-text-sm mb-3">Academic Requirement</h6>
+                            <h6 class="p-text-sm mb-3">{{ college.alias }}</h6>
 
                                                 <ul class="mb-2">
                                 <li class="p-text-xs text-black fw-5"></li>
@@ -130,28 +130,28 @@
 
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3 mb-2 px-1">
-                        <div class="course-itm-bottom-block h-100">
-                            <h6 class="p-text-sm mb-3">IELTS Reqirement</h6>
-
-                                                <ul class="mb-2">
-                                <li class="p-text-xs text-black fw-5">6.5 Each Band 5.5</li>
-                                <li class="p-text-xs fw-3 text-black">
-                                    </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 mb-2 px-1">
-                        <div class="course-itm-bottom-block h-100">
-                            <h6 class="p-text-sm mb-3">Intake</h6>
-
-                                                <ul class="mb-2">
-                                <li class="p-text-xs text-black fw-5">February
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+{#                    <div class="col-sm-6 col-lg-3 mb-2 px-1">#}
+{#                        <div class="course-itm-bottom-block h-100">#}
+{#                            <h6 class="p-text-sm mb-3">IELTS Reqirement</h6>#}
+{##}
+{#                                                <ul class="mb-2">#}
+{#                                <li class="p-text-xs text-black fw-5">6.5 Each Band 5.5</li>#}
+{#                                <li class="p-text-xs fw-3 text-black">#}
+{#                                    </li>#}
+{#                            </ul>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-sm-6 col-lg-3 mb-2 px-1">#}
+{#                        <div class="course-itm-bottom-block h-100">#}
+{#                            <h6 class="p-text-sm mb-3">Intake</h6>#}
+{##}
+{#                                                <ul class="mb-2">#}
+{#                                <li class="p-text-xs text-black fw-5">February#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
                 </div>
             </div>
         </div>
