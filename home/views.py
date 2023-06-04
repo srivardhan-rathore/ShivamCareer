@@ -28,6 +28,7 @@ def contact_page(request):
         contact.course = request.POST.get('course')
         contact.message = request.POST.get('message')
         contact.save()
+
         email_subject = f'New query: {contact.name}: {contact.email}'
         email_message = f'Name: {contact.name} \nMessage: {contact.message}' \
                         f' \nEmail: {contact.email} \nPhone: {contact.phone}' \
