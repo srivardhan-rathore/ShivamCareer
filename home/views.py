@@ -1,6 +1,9 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from . import forms
 from .models import College, Course, Blog, Testimonial, Contact
+import threading
+from django.conf import settings
+from django.core.mail import EmailMessage
 
 
 def home(request):
@@ -25,7 +28,12 @@ def contact_page(request):
         contact.course = request.POST.get('course')
         contact.message = request.POST.get('message')
         contact.save()
-
+        email_subject = f'New query: {contact.name}: {contact.email}'
+        email_message = f'Name: {contact.name} \nMessage: {contact.message}' \
+                        f' \nEmail: {contact.email} \nPhone: {contact.phone}' \
+                        f' \nEducation: {contact.education_level} \nCourse: {contact.course}'
+        EmailThread(email_subject, email_message, ["shivamcareerconsultancy@gmail.com"]).start()
+        return render(request, 'home/contact-success.html')
     courses = Course.objects.all()
     context = {'courses': courses}
     return render(request, 'home/contact-us.html', context)
@@ -52,6 +60,13 @@ def course_page(request):
     return render(request, 'home/course_page.html', context)
 
 
+def course_detail(request, uid):
+    course = get_object_or_404(Course, id=uid)
+    colleges = College.objects.filter(course_offered=course)
+    context = {'course': course, 'colleges': colleges}
+    return render(request, 'home/course_detail.html', context)
+
+
 # Blog Page
 def blog_page(request):
     blogs = Blog.objects.all()
@@ -75,6 +90,23 @@ def contact_form(request):
     context = {'form': form}
     return render(request, 'home/contact-us.html', context)
 
+
+class EmailThread(threading.Thread):
+    def __init__(self, subject, html_content, recipient_list, html_message=None):
+        self.subject = subject
+        self.recipient_list = recipient_list
+        self.html_content = html_content
+        self.html_message = html_message
+        threading.Thread.__init__(self)
+
+    def run(self):
+        print("Yo")
+        message = EmailMessage(self.subject, self.html_content, settings.DEFAULT_FROM_EMAIL,
+                               self.recipient_list)
+        message.content_subtype = "html"
+        print(message.send(fail_silently=False))
+
+        print(message.to)
 
 
 

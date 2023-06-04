@@ -71,17 +71,18 @@
                                 </div>
 
                                 <div class = "contact-form">
-                                    <form action="https://www.nepalec.edu.np/booking-store" method="POST" enctype="multipart/form-data">
-                                        <input type="hidden" name="_token" value="9MhGcmnsE6ZdgJIHTkxpOzXZ3nHrlXnqTqPT3bCP">                                      <div class = "form-element mb-3 mb-sm-4">
-                                        <input type = "text" name="name" value="" class = "form-control" placeholder="Full Name" name = "">
-                                      </div>
+                                    <form action="{% url 'contact_page' %}" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <div class = "form-element mb-3 mb-sm-4">
+                                            <input type = "text" name="name" value="" class = "form-control" placeholder="Full Name" name = "">
+                                        </div>
 
                                       <div class = "form-element row mb-3 mb-sm-4">
                                         <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
-                                          <input type = "text" name="contact" value=""  class = "form-control" placeholder="Mobile Number" name = "">
+                                          <input type = "text" name="phone" class = "form-control" placeholder="Mobile Number" name = "">
                                         </div>
                                         <div class = "col-md-6">
-                                          <input type = "email" name="email" value="" class = "form-control" placeholder="Email Id" name = "">
+                                          <input type = "email" name="email" class = "form-control" placeholder="Email Id" name = "">
                                         </div>
                                       </div>
 
@@ -89,9 +90,9 @@
                                         <div class = "col-md-6 mb-3 mb-sm-4 mb-md-0">
                                           <select name = "education_level" class = "form-select">
                                             <option selected>Education level</option>
-                                            <option value="+2">+2</option>
-                                            <option value="bachelor">Bachelor</option>
-                                            <option value="master">Master</option>
+                                            <option value="12">12th (UnderGrad)</option>
+                                            <option value="bachelor">Bachelor (Graduate)</option>
+                                            <option value="master">Master (Post Graduate)</option>
                                           </select>
                                         </div>
 
@@ -104,79 +105,9 @@
                                             </select>
                                           </div>
                                       </div>
-
-                                      <div class = "form-element mb-3 mb-sm-4">
-                                        <label for = "" class = "form-label mb-3 mb-sm-4">Your preferred study destination</label>
-                                        <div class = "checkbox-list d-flex flex-wrap align-items-center">
-                                                                                        
-
-                                            <div class = "checkbox-item">
-                                              <input type = "checkbox" class = "checkbox-btn" value="1" name = "destinations[]">
-                                              <div class = "check-btn-cnt d-flex align-items-center">
-                                                <div class = "check-btn-img icon-img-sm">
-                                                  <img src = "{% static 'storage/upload/23/03/1679895247USA%20flag.jpg' %}" alt = "">
-                                                </div>
-                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in USA</span>
-                                              </div>
-                                            </div>
-                                            
-
-                                            <div class = "checkbox-item">
-                                              <input type = "checkbox" class = "checkbox-btn" value="2" name = "destinations[]">
-                                              <div class = "check-btn-cnt d-flex align-items-center">
-                                                <div class = "check-btn-img icon-img-sm">
-                                                  <img src = "{% static 'storage/upload/22/12/1670232331flag-1.png' %}" alt = "">
-                                                </div>
-                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Canada</span>
-                                              </div>
-                                            </div>
-                                            
-
-                                            <div class = "checkbox-item">
-                                              <input type = "checkbox" class = "checkbox-btn" value="3" name = "destinations[]">
-                                              <div class = "check-btn-cnt d-flex align-items-center">
-                                                <div class = "check-btn-img icon-img-sm">
-                                                  <img src = "{% static 'storage/upload/23/03/1679895298Australia%20flag.jpg' %}" alt = "">
-                                                </div>
-                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Australia</span>
-                                              </div>
-                                            </div>
-                                            
-
-                                            <div class = "checkbox-item">
-                                              <input type = "checkbox" class = "checkbox-btn" value="10" name = "destinations[]">
-                                              <div class = "check-btn-cnt d-flex align-items-center">
-                                                <div class = "check-btn-img icon-img-sm">
-                                                  <img src = "{% static 'storage/upload/23/03/1679895200UK%20flag.jpg' %}" alt = "">
-                                                </div>
-                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in United Kingdom</span>
-                                              </div>
-                                            </div>
-                                            
-
-                                            <div class = "checkbox-item">
-                                              <input type = "checkbox" class = "checkbox-btn" value="11" name = "destinations[]">
-                                              <div class = "check-btn-cnt d-flex align-items-center">
-                                                <div class = "check-btn-img icon-img-sm">
-                                                  <img src = "{% static 'storage/upload/23/01/1674035000istockphoto-657672808-612x612.jpg' %}" alt = "">
-                                                </div>
-                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in New Zealand</span>
-                                              </div>
-                                            </div>
-                                            
-
-                                            <div class = "checkbox-item">
-                                              <input type = "checkbox" class = "checkbox-btn" value="12" name = "destinations[]">
-                                              <div class = "check-btn-cnt d-flex align-items-center">
-                                                <div class = "check-btn-img icon-img-sm">
-                                                  <img src = "{% static 'storage/upload/23/01/1674036516netherlad.png' %}" alt = "">
-                                                </div>
-                                                <span class = "ms-2 p-text-sm text-primary opacity-100">Study in Netherlands</span>
-                                              </div>
-                                            </div>
-                                                                                        
-                                        </div>
-                                      </div>
+                                    <div class="col-md-12 mt-4">
+                                        <textarea name="message" required style="height: 180px !important;" placeholder="Type your message here..." class="form-control" id="" cols="30" rows="15"></textarea>
+                                    </div>
 
                                       <button type = "submit" class = "btn btn-flame"><span class = "btn-text">Submit</span></button>
                                     </form>

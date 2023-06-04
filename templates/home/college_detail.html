@@ -2,5 +2,42 @@
 {% load static %}
 
 {% block content %}
+        <main class="pg-blogs-single">
+            <section class="sc-blogs-single bg-whitesmoke sc-py-6 px-3">
+                <div class="container">
+                    <div class="sc-blogs-single-cnt">
+
+                        <div class="blogs-single-head">
+                            <div class="d-flex align-items-center justify-content-start flex-wrap">
+                                <p class="mb-0 text-primary fs-xxx-sm">{{ college.alias }}</p>
+                            </div>
+
+                            <div class="blogs-single-head-title">
+                                <h1>{{ college.name }}</h1>
+                            </div>
+
+                        </div>
+
+                        <div class="blogs-single-body">
+                            <img width="" src="{{ college.logo.url }}" alt="{{ college.name }}">
+                            <img src="{{ college.image.url }}" alt="{{ college.name }}">
+
+                            {{ blog.content|safe }}
+                        </div>
+                        <div class="blogs-single-head-title">
+                            <h2>Courses Offered </h2>
+                            <ul>
+                                {% for course in college.course_offered.all %}
+                                    <li>{{ course.name }} ({{ course.short_name }})</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+    </section>
+
+    {% include 'base/inquiry-section.html' %}
+    </main>
 
 {% endblock %}

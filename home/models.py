@@ -26,6 +26,9 @@ class College(models.Model):
     logo = models.ImageField(upload_to="college/logo/")
     image = models.ImageField(upload_to="college/image/")
 
+    def __str__(self):
+        return self.name
+
 
 class Contact(models.Model):
     name = models.CharField(max_length=100)
@@ -35,6 +38,9 @@ class Contact(models.Model):
     course = models.CharField(max_length=80, blank=True, null=True)
     message = models.TextField(max_length=1000, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Testimonial(models.Model):
@@ -56,4 +62,7 @@ class Blog(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
 

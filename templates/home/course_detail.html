@@ -1,0 +1,78 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+    <main class="pg-course-details">
+{#        <section class="sc-banner sc-py-6 px-3 d-flex align-items-center"#}
+{#            style="background-image: url('../storage/upload/23/02/1677072746all.png')">#}
+{#            <div class="container">#}
+{#                <div class="sc-banner-cnt">#}
+{#                    <div class="sc-block row align-items-lg-center">#}
+{#                        <div class="sc-block-l text-center col-lg-6 text-lg-start">#}
+{#                            <div class="max-w-wrapper">#}
+{##}
+{#                                <h1 class="title-lg text-white">Why study Bachelor of Business at Victoria University (Sydney)</h1>#}
+{#                                <h3 class="text-xl text-white">Study Bachelor of Business at Victoria University</h3>#}
+{##}
+{#                                <a href="#" class="btn btn-flame-sm">#}
+{#                                    <span class="btn-text">Inquiry Now</span>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </section>#}
+
+        <section class="sc-course-block1 sc-py-6 px-3 bg-white">
+            <div class="container">
+                <div class="sc-course-block1-cnt">
+                    <div class="sc-block row align-items-center">
+                        <!-- block left -->
+                        <div class="sc-block-l col-xl-7">
+                            <div class="sc-title text-center">
+                                <h5 class="sc-title-sub text-xl-start">Course overview</h5>
+                                <h2 class="sc-title-main max-w-wrapper mx-auto ms-xl-0 text-xl-start">{{ course.name }}
+                                </h2>
+                            </div>
+                            <div class="cnt-body dest-cnt-body">
+                                {{ course.description|safe }}
+                            </div>
+                        </div>
+                        <!-- block right -->
+                        <div class="sc-block-r col-xl-5 mt-5 mt-xl-0">
+                            <div class="max-w-wrapper ms-xl-auto">
+                                <img src="{% static 'storage/upload/23/02/1677154899qq.png' %}"
+                                    alt="{{ course.short_name }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="long-desc mt-3">
+                        <h2>Colleges Offering {{ course.name }}</h2>
+
+<p></p>
+<ul>
+    {% for college in colleges %}
+        <li><a style="color: #0a58ca" href="{% url 'college_detail' college.id %}">{{ college.name }}</a></li>
+    {% endfor %}
+</ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% include 'base/review-section.html' %}
+
+        <section class="bg-light-gray">
+            <img src="{% static 'front/assets/images/components/line.png' %}" alt="">
+        </section>
+    {% include 'base/inquiry-section.html' %}
+    </main>
+
+{% endblock %}
+

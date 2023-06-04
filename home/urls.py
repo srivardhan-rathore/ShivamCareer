@@ -10,7 +10,8 @@ urlpatterns = [
     path('college/<str:uid>/', views.college_detail, name='college_detail'),
 
     path('courses/', views.course_page, name='course_page'),
+    path('course/<str:uid>/', views.course_detail, name='course_detail'),
 
     path('blogs/', views.blog_page, name='blog_page'),
-    path('blog/<str:slug>', views.blog_detail, name='blog_detail'),
+    path('blog/<str:slug>/', views.blog_detail, name='blog_detail'),
 ]

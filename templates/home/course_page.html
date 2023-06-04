@@ -33,22 +33,19 @@
                     <h4 class="card-title title-xxl">{{ course.name }}</h4>
                     <p class="p-text">{{ course.description|truncatewords:30|safe }}</p>
                 </div>
-{#                <div class="card-footer bg-primary p-0">#}
-{#                    <a href="class/pte-a.html"#}
-{#                        class="card-link w-100 h-100 d-flex align-items-center justify-content-center text text-white">#}
-{#                        <span class="me-1">Continue Reading</span>#}
-{#                        <span class="card-link-icon">#}
-{#                            <i class="fa-solid fa-chevron-right"></i>#}
-{#                            <i class="fa-solid fa-chevron-right"></i>#}
-{#                        </span>#}
-{#                    </a>#}
-{#                </div>#}
+                <div class="card-footer bg-primary p-0">
+                    <a href="{% url 'course_detail' course.id %}"
+                        class="card-link w-100 h-100 d-flex align-items-center justify-content-center text text-white">
+                        <span class="me-1">Continue Reading</span>
+                        <span class="card-link-icon">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
             {% endfor %}
-
-
-
         <div class="pagination d-flex justify-content-center">
 
                                 </div>
