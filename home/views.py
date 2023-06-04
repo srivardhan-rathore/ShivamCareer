@@ -64,7 +64,8 @@ def course_page(request):
 def course_detail(request, uid):
     course = get_object_or_404(Course, id=uid)
     colleges = College.objects.filter(course_offered=course)
-    context = {'course': course, 'colleges': colleges}
+    testimonials = Testimonial.objects.all()
+    context = {'course': course, 'colleges': colleges, 'testimonials': testimonials}
     return render(request, 'home/course_detail.html', context)
 
 
