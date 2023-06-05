@@ -12,7 +12,7 @@
             </div>
             <p>We have paved the education journey for many students, so they can enjoy their student life to the fullest in their favourite colleges.</p>
             <p>Find out how our students got to get ahead, what they have got to share with us.</p>
-            <img src = "{% static 'front/assets/images/index-pg/testimonial-icon.png' %}" class = "text-icon">
+            <img loading="lazy" src = "{% static 'front/assets/images/index-pg/testimonial-icon.png' %}" class = "text-icon">
           </div>
 
           <div class = "sc-block-r col-lg-6">
@@ -22,7 +22,7 @@
               <div class = "tests-slider-item">
                 <div class = "tests-slider-item-head">
                   <div class = "icon-avatar img-fit-cover">
-                    <img alt="{{ testimonial.name }}" src = "{{ testimonial.image.url }}">
+                    <img loading="lazy" alt="{{ testimonial.name }}" src = "{{ testimonial.image.url }}">
                   </div>
                   <div class = "info">
                     <p class = "mb-0 fw-6 p-text text-dark">{{ testimonial.name }}</p>
@@ -32,7 +32,7 @@
                 <div class = "tests-slider-item-body">
                   <p class = "mb-0 p-text">&ldquo;{{ testimonial.review }}&rdquo;</p>
                 </div>
-                <img alt="" src = "{% static 'front/assets/images/icons/quote-icon.png' %}" class = "quote-icon">
+                <img loading="lazy" alt="" src = "{% static 'front/assets/images/icons/quote-icon.png' %}" class = "quote-icon">
               </div>
             {% endfor %}
 

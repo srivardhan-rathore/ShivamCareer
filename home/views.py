@@ -102,7 +102,6 @@ class EmailThread(threading.Thread):
         threading.Thread.__init__(self)
 
     def run(self):
-        print("Yo")
         message = EmailMessage(self.subject, self.html_content, settings.DEFAULT_FROM_EMAIL,
                                self.recipient_list)
         message.content_subtype = "html"

@@ -10,9 +10,9 @@
     <main>
         <section class="sc-banner bg-secondary sc-py-6 px-3">
             <!-- shape patterns -->
-            <img src="{% static 'front/assets/images/components/square-pattern.svg' %}" alt=""
+            <img loading="lazy" src="{% static 'front/assets/images/components/square-pattern.svg' %}" alt=""
                 class="square-shape-pattern">
-            <img src="{% static 'front/assets/images/components/circle-pattern.svg' %}" alt=""
+            <img loading="lazy" src="{% static 'front/assets/images/components/circle-pattern.svg' %}" alt=""
                 class="circle-shape-pattern">
             <!-- end of shape patterns -->
             <div class="banner-slider">
@@ -30,11 +30,11 @@
                             <div class="sc-block-r mt-5 position-relative col-lg-6">
                                 <div class="block-wrapper">
 
-                                    <img src="{% static 'storage/upload/23/01/1673245159photo1673244325.jpg' %}" alt="Nepal Education Banner" class="mx-auto me-lg-0">
+                                    <img loading="lazy" src="{% static 'storage/upload/23/01/1673245159photo1673244325.jpg' %}" alt="Nepal Education Banner" class="mx-auto me-lg-0">
 
                                     <div class="banner-card d-none d-sm-block">
                                         <div class='banner-card-img'>
-                                            <img src="https://th.bing.com/th/id/OIP.Bsg0LXnfC9ZTkK9AY63ZIQHaFD?pid=ImgDet&rs=1"
+                                            <img loading="lazy" src="https://th.bing.com/th/id/OIP.Bsg0LXnfC9ZTkK9AY63ZIQHaFD?pid=ImgDet&rs=1"
                                                 alt="Education Banner">
                                         </div>
                                         <div class='banner-card-body'>
@@ -126,7 +126,7 @@
                 <div class = "col-sm-6 col-md-4">
                     <div class = "card-box-item">
                       <div class = "card-box-item-icon">
-                        <img src = "{% static 'storage/upload/23/02/16769737335078218.png' %}" alt = "">
+                        <img loading="lazy" src = "{% static 'storage/upload/23/02/16769737335078218.png' %}" alt = "">
                       </div>
                       <h6 class = "card-box-item-title">College &amp; University Admission</h6>
                       <p class = "p-text mb-0">College and university admission process can be simplified with guidance.</p>
@@ -135,7 +135,7 @@
                     <div class = "col-sm-6 col-md-4">
                     <div class = "card-box-item">
                       <div class = "card-box-item-icon">
-                        <img src = "{% static 'storage/upload/23/02/16769736198019841.png' %}" alt = "">
+                        <img loading="lazy" src = "{% static 'storage/upload/23/02/16769736198019841.png' %}" alt = "">
                       </div>
                       <h6 class = "card-box-item-title">Scholarship Assistance</h6>
                       <p class = "p-text mb-0">Scholarship assistance provides financial support for education.</p>
@@ -144,7 +144,7 @@
                                 <div class = "col-sm-6 col-md-4">
                     <div class = "card-box-item">
                       <div class = "card-box-item-icon">
-                        <img src = "{% static 'storage/upload/23/02/16769736983441512.png' %}" alt = "">
+                        <img loading="lazy" src = "{% static 'storage/upload/23/02/16769736983441512.png' %}" alt = "">
                       </div>
                       <h6 class = "card-box-item-title">Financial Documentation Guidance</h6>
                       <p class = "p-text mb-0">Financial documentation guidance helps with proper documentation procedures.</p>
@@ -153,7 +153,7 @@
                                 <div class = "col-sm-6 col-md-4">
                     <div class = "card-box-item">
                       <div class = "card-box-item-icon">
-                        <img src = "{% static 'storage/upload/22/12/1670230573service-1.svg' %}" alt = "">
+                        <img loading="lazy" src = "{% static 'storage/upload/22/12/1670230573service-1.svg' %}" alt = "">
                       </div>
                       <h6 class = "card-box-item-title">Career Counselling</h6>
                       <p class = "p-text mb-0">Our Education Counsellors will learn about your career aspirations.</p>
@@ -162,7 +162,7 @@
                                 <div class = "col-sm-6 col-md-4">
                     <div class = "card-box-item">
                       <div class = "card-box-item-icon">
-                        <img src = "{% static 'storage/upload/23/02/16769738722648510.png' %}" alt = "">
+                        <img loading="lazy" src = "{% static 'storage/upload/23/02/16769738722648510.png' %}" alt = "">
                       </div>
                       <h6 class = "card-box-item-title">Visa Services</h6>
                       <p class = "p-text mb-0">Visa services assist with obtaining necessary visa for travel.</p>
@@ -171,7 +171,7 @@
                                 <div class = "col-sm-6 col-md-4">
                     <div class = "card-box-item">
                       <div class = "card-box-item-icon">
-                        <img src = "{% static 'storage/upload/23/02/16769739197460989.png' %}" alt = "">
+                        <img loading="lazy" src = "{% static 'storage/upload/23/02/16769739197460989.png' %}" alt = "">
                       </div>
                       <h6 class = "card-box-item-title">Test Preparation Classes</h6>
                       <p class = "p-text mb-0">Test preparation classes enhance test-taking skills for exams.</p>
@@ -202,11 +202,11 @@
             <div class="courses-slider-item">
                 <div class="card-overlay-item">
                     <div class="card-overlay-item-wrapper">
-                        <img src="{{ college.image.url }}" alt="{{ college.name }}">
+                        <img loading="lazy" src="{{ college.image.url }}" alt="{{ college.name }}">
                         <div class="card-overlay-item-info">
                             <a href="{% url 'contact_page' %}" type="button" class="btn-outline-flame">Apply now</a>
                             <a href="{% url 'college_detail' college.id %}">
-                                <p class="p-text mb-0">{{ college.alias }}</p>
+                            <p class="p-text mb-0">{{ college.alias }}</p>
                             <h5 class="fw-7 mt-0 p-text">{{ college.name }}</h5>
                             </a>
                         </div>
@@ -822,7 +822,7 @@
 
 
         <section class="bg-light-gray">
-            <img src="{% static 'front/assets/images/components/line.png' %}" alt="">
+            <img loading="lazy" src="{% static 'front/assets/images/components/line.png' %}" alt="">
         </section>
 
         {% include 'base/inquiry-section.html' %}

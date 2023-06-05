@@ -47,7 +47,7 @@
                         <!-- block right -->
                         <div class="sc-block-r col-xl-5 mt-5 mt-xl-0">
                             <div class="max-w-wrapper ms-xl-auto">
-                                <img src="{% static 'storage/upload/23/02/1677154899qq.png' %}"
+                                <img loading="lazy" src="{% static 'storage/upload/23/02/1677154899qq.png' %}"
                                     alt="{{ course.short_name }}">
                             </div>
                         </div>
@@ -69,7 +69,7 @@
     {% include 'base/review-section.html' %}
 
         <section class="bg-light-gray">
-            <img src="{% static 'front/assets/images/components/line.png' %}" alt="">
+            <img loading="lazy" src="{% static 'front/assets/images/components/line.png' %}" alt="">
         </section>
     {% include 'base/inquiry-section.html' %}
     </main>
