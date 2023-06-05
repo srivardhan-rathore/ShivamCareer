@@ -5,6 +5,38 @@
     Home
 {% endblock %}
 
+{% block head %}
+    <style>
+        @keyframes glowing {
+          0% { text-shadow: 0 0 5px yellow; }
+          50% { text-shadow: 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow; }
+          100% { text-shadow: 0 0 5px yellow; }
+        }
+
+        @keyframes popup {
+          0% { transform: translateY(0); }
+          20% { transform: translateY(5px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0); }
+        }
+
+        @keyframes pop {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+          100% { transform: scale(1); }
+        }
+
+        .glow {
+          animation: pop 2s infinite, glowing 1.5s infinite;
+          color: white;
+          border-radius: 10px;
+          background-color: #83a131;
+          border: 2px solid #83a131;
+          padding: 10px;
+          display: inline-block;
+        }
+    </style>
+{% endblock %}
 
 {% block content %}
     <main>
@@ -22,9 +54,10 @@
                             <div class="sc-block-l text-center col-lg-6 text-lg-start">
                                 <div class="max-w-wrapper">
                                     <h1 class="title-lg">Best Education Consultancy in India</h1>
+                                    <p class="glow"><b>Direct Admission</b> Available in All Courses.</p>
                                     <p>We help students get into top institutions in India & abroad all across the globe.</p>
                                 </div>
-                                    <a  type="button" href="#inquirySection"  class="btn btn-flame">Inquire Now</a>
+                                    <a type="button" href="#inquirySection" class="btn btn-flame">Inquire Now</a>
                             </div>
 
                             <div class="sc-block-r mt-5 position-relative col-lg-6">
